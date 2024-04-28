@@ -7,44 +7,45 @@ Based on [grillme99's template](https://github.com/grilme99/roblox-project-templ
 
 ### Tools
 
--   [aftman](https://github.com/LPGhatguy/aftman), a toolchain manager
--   [lune](https://github.com/lune-org/lune), a standalone Luau runtime\
-     As an alternative to keeping multiple versions of the same script to allow for cross platform use.
--   [pesde](https://github.com/daimond113/pesde), a modern package manager\
-     Q: Why not wally?\
-     A: Wally is borderline unmaintained, and pesde fixes all of the issues I personally have with Wally, such as lack of type support.
--   [darklua](https://github.com/seaofvoices/darklua), a Lua code transformer\
-     As a way to remove dead code and allow for string requires.
--   [stylua](https://github.com/JohnnyMorganz/stylua), an opiniotated Lua code formatter
--   [selene](https://github.com/kampfkarren/selene), a Lua linter
--   [luau-lsp](https://github.com/JohnnyMorganz/luau-lsp), a Luau language server
-    Q: Why not <x>?\
-     A: Luau Lsp uses Luau's own type system, instead of creating a new one.
--   [rojo](https://github.com/rojo-rbx/rojo), a code syncing tool
--   [zap](https://github.com/red-blox/zap), a modern Roblox networking cli
-    Q: Why not <x>?\
-     A: The networking library / utility you want to use is all up to you.\
-     Personally, I chose zap due to the ease of use and the extremely performant & bandwidth optimized code it generates, alongside full type support.\
-     As an alternative that's a library instead of a cli, I recommend [ffrostfall's bytenet](https://github.com/ffrostflame/bytenet).
--   [Github Workflows](https://docs.github.com/en/actions/using-workflows), for easy CI pipelines
+→ [aftman](https://github.com/LPGhatguy/aftman), a toolchain manager
+→ [lune](https://github.com/lune-org/lune), a standalone Luau runtime\
+ As an alternative to keeping multiple versions of the same script to allow for cross platform use.
+→ [pesde](https://github.com/daimond113/pesde), a modern package manager\
+ Q: Why not wally?\
+ A: Wally is borderline unmaintained, and pesde fixes all of the issues I personally have with Wally, such as lack of type support.
+→ [darklua](https://github.com/seaofvoices/darklua), a Lua code transformer\
+ As a way to remove dead code and allow for string requires.
+→ [stylua](https://github.com/JohnnyMorganz/stylua), an opiniotated Lua code formatter
+→ [selene](https://github.com/kampfkarren/selene), a Lua linter
+→ [luau-lsp](https://github.com/JohnnyMorganz/luau-lsp), a Luau language server
+Q: Why not <x>?\
+ A: Luau Lsp uses Luau's own type system, instead of creating a new one.
+→ [rojo](https://github.com/rojo-rbx/rojo), a code syncing tool
+→ [zap](https://github.com/red-blox/zap), a modern Roblox networking cli
+Q: Why not <x>?\
+ A: The networking library / utility you want to use is all up to you.\
+ Personally, I chose zap due to the ease of use and the extremely performant & bandwidth optimized code it generates, alongside full type support.\
+ As an alternative that's a library instead of a cli, I recommend [ffrostfall's bytenet](https://github.com/ffrostflame/bytenet).
+→ [Github Workflows](https://docs.github.com/en/actions/using-workflows), for easy CI pipelines
 
 ### Libraries
 
--   [ECR](https://github.com/centau/ecr), a sparse-set based ECS library
--   [keyForm](https://github.com/ffrostflame/keyform), a fully typed and maintained datastore library for Roblox
-    Q: Why not <x>?\
-     A: I picked keyForm for it's active maintenance and out of the box type support.\
-     I'd use ProfileService, if not for it's huge codebase and requirement to write a wrapper around it for a decent experience (and the lack of support for types without using a fork).
+→ [ECR](https://github.com/centau/ecr), a sparse-set based ECS library
+→ [keyForm](https://github.com/ffrostflame/keyform), a fully typed and maintained datastore library for Roblox
+Q: Why not <x>?\
+ A: I picked keyForm for it's active maintenance and out of the box type support.\
+ I'd use ProfileService, if not for it's huge codebase and requirement to write a wrapper around it for a decent experience (and the lack of support for types without using a fork).
+
 -   [framework](https://gist.github.com/Mark-Marks/dfa3542de15f8d9605493fa01d4ef81c), a tiny module loader with lifecycles for Roblox
 
 Each one of these libraries is built into the template.
 
 ### Scripts
 
--   `scripts/analyze.luau`, for full code analysis with luau-lsp
--   `scripts/build.luau`, to build a game file from the codebase
--   `scripts/dev.luau`, to continously build the codebase and start rojo synchronization
--   `scripts/install-packages.luau`, to install all dependencies
+→ `scripts/analyze.luau`, for full code analysis with luau-lsp
+→ `scripts/build.luau`, to build a game file from the codebase
+→ `scripts/dev.luau`, to continously build the codebase and start rojo synchronization
+→ `scripts/install-packages.luau`, to install all dependencies
 
 To use them, run them with lune:
 `lune run SCRIPT_PATH`
@@ -58,10 +59,9 @@ git clone https://github.com/mark-marks/roblox-project-template.git
 ```
 
 Next, change the name of the project and it's scope in the following places:
-
--   pesde.yaml
--   default.project.json
--   build.project.json
+→ pesde.yaml
+→ default.project.json
+→ build.project.json
 
 ## Usage
 
@@ -98,10 +98,10 @@ In vscode, the structure for a module with children looks like this:
 
 ```
 module
- -> init.luau
- -> child_a.luau
- -> child_b.luau
- -> child_c.luau
+ → init.luau
+ → child_a.luau
+ → child_b.luau
+ → child_c.luau
 ```
 
 Because of this, Luau thinks that the children are not children, but siblings of the module.
@@ -113,16 +113,15 @@ local child_a = require(script.child_a)
 ```
 
 This template has the following require aliases:
-
--   `@packages` -> `packages/`
--   `@client` -> `src/client/`
--   `@controllers` -> `src/client/controllers/`
--   `@shared` -> `src/shared/`
--   `@server` -> `src/server/`
--   `@services` -> `src/server/services/`
--   `@components` -> `src/server/services/world/components`\
-     Note: this leads directly to the `components` ModuleScript, not to a directory called `components`.\
-     This is for easier access to components inside of ECS systems.
+→ `@packages` -> `packages/`
+→ `@client` -> `src/client/`
+→ `@controllers` -> `src/client/controllers/`
+→ `@shared` -> `src/shared/`
+→ `@server` -> `src/server/`
+→ `@services` -> `src/server/services/`
+→ `@components` -> `src/server/services/world/components`\
+ Note: this leads directly to the `components` ModuleScript, not to a directory called `components`.\
+ This is for easier access to components inside of ECS systems.
 
 ### Modules
 
