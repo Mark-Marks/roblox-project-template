@@ -22,10 +22,10 @@ jobs:
                   token: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Install Pesde packages
-              run: lune run scripts/install-packages.sh
+              run: lune run scripts/install-packages.luau
 
             - name: Analyze
-              run: lune run scripts/analyze.sh
+              run: lune run scripts/analyze.luau
 
     lint:
         name: Lint
