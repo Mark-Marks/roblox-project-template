@@ -18,11 +18,11 @@ Based on [grillme99's template](https://github.com/grilme99/roblox-project-templ
 -   [stylua](https://github.com/JohnnyMorganz/stylua), an opiniotated Lua code formatter
 -   [selene](https://github.com/kampfkarren/selene), a Lua linter
 -   [luau-lsp](https://github.com/JohnnyMorganz/luau-lsp), a Luau language server
-        Q: Why not <\x>?\
+        Q: Why not x?\
         A: Luau Lsp uses Luau's own type system, instead of creating a new one.
 -   [rojo](https://github.com/rojo-rbx/rojo), a code syncing tool
 -   [zap](https://github.com/red-blox/zap), a modern Roblox networking cli
-        Q: Why not <\x>?\
+        Q: Why not x?\
         A: The networking library / utility you want to use is all up to you.\
         Personally, I chose zap due to the ease of use and the extremely performant & bandwidth optimized code it generates, alongside full type support.\
         As an alternative that's a library instead of a cli, I recommend [ffrostfall's bytenet](https://github.com/ffrostflame/bytenet).
@@ -32,7 +32,7 @@ Based on [grillme99's template](https://github.com/grilme99/roblox-project-templ
 
 -   [ECR](https://github.com/centau/ecr), a sparse-set based ECS library
 -   [keyForm](https://github.com/ffrostflame/keyform), a fully typed and maintained datastore library for Roblox
-        Q: Why not <\x>?\
+        Q: Why not x?\
         A: I picked keyForm for it's active maintenance and out of the box type support.\
         I'd use ProfileService, if not for it's huge codebase and requirement to write a wrapper around it for a decent experience (and the lack of support for types without using a fork).
 -   [framework](https://gist.github.com/Mark-Marks/dfa3542de15f8d9605493fa01d4ef81c), a tiny module loader with lifecycles for Roblox
