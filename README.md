@@ -7,35 +7,35 @@ Based on [grillme99's template](https://github.com/grilme99/roblox-project-templ
 
 ### Tools
 
--   [aftman](https://github.com/LPGhatguy/aftman), a toolchain manager
--   [lune](https://github.com/lune-org/lune), a standalone Luau runtime
+-   [Aftman](https://github.com/LPGhatguy/aftman), a toolchain manager
+-   [Lune](https://github.com/lune-org/lune), a standalone Luau runtime
     -   As an alternative to keeping multiple versions of the same script to allow for cross platform use.
--   [pesde](https://github.com/daimond113/pesde), a modern package manager
+-   [Pesde](https://github.com/daimond113/pesde), a modern package manager
     -   Q: Why not wally?
     -   A: Wally is borderline unmaintained, and pesde fixes all of the issues I personally have with Wally, such as lack of type support.
--   [darklua](https://github.com/seaofvoices/darklua), a Lua code transformer
+-   [Darklua](https://github.com/seaofvoices/darklua), a Lua code transformer
     -   As a way to remove dead code and allow for string requires.
--   [stylua](https://github.com/JohnnyMorganz/stylua), an opiniotated Lua code formatter
--   [selene](https://github.com/kampfkarren/selene), a Lua linter
+-   [StyLua](https://github.com/JohnnyMorganz/stylua), an opiniotated Lua code formatter
+-   [Selene](https://github.com/kampfkarren/selene), a Lua linter
 -   [luau-lsp](https://github.com/JohnnyMorganz/luau-lsp), a Luau language server
     -   Q: Why not X?
     -   A: Luau Lsp uses Luau's own type system, instead of creating a new one.
--   [rojo](https://github.com/rojo-rbx/rojo), a code syncing tool
--   [zap](https://github.com/red-blox/zap), a modern Roblox networking CLI
+-   [Rojo](https://github.com/rojo-rbx/rojo), a code syncing tool
+-   [Zap](https://github.com/red-blox/zap), a modern Roblox networking CLI
     -   Q: Why not X?
     -   A: The networking library / utility you want to use is all up to you.\
-        Personally, I chose zap due to the ease of use and the extremely performant & bandwidth optimized code it generates, alongside full type support.\
+        Personally, I chose Zap due to the ease of use and the extremely performant & bandwidth optimized code it generates, alongside full type support.\
         As an alternative that's a library instead of a cli, I recommend [ffrostfall's bytenet](https://github.com/ffrostflame/bytenet).
 -   [Github Workflows](https://docs.github.com/en/actions/using-workflows), for easy CI pipelines
 
 ### Libraries
 
 -   [ECR](https://github.com/centau/ecr), a sparse-set based ECS library
--   [keyForm](https://github.com/ffrostflame/keyform), a fully typed and maintained datastore library for Roblox
+-   [KeyForm](https://github.com/ffrostflame/keyform), a fully typed and maintained datastore library for Roblox
     -   Q: Why not X?
     -   A: I picked keyForm for it's active maintenance and out of the box type support.\
         I'd use ProfileService, if not for it's huge codebase and requirement to write a wrapper around it for a decent experience (and the lack of support for types without using a fork).
--   [framework](https://gist.github.com/Mark-Marks/dfa3542de15f8d9605493fa01d4ef81c), a tiny module loader with lifecycles for Roblox
+-   [Framework](https://gist.github.com/Mark-Marks/dfa3542de15f8d9605493fa01d4ef81c), a tiny module loader with lifecycles for Roblox
 
 Each one of these libraries is built into the template.
 
@@ -158,7 +158,7 @@ Now, if you test your game, `Hello, World!` should pop up in the developer conso
 
 ### Data
 
-This template automatically handles loading, saving with keyForm and data replication with zap.\
+This template automatically handles loading, saving with keyForm and data replication with Zap.\
 To modify the default data for each player, you need to modify two files:
 
 1. `src/services/data/template.luau`
@@ -168,12 +168,12 @@ To modify the default data for each player, you need to modify two files:
     }
     ```
 2. `net.zap`
-   `cfg
-type PlayerData = struct {
-    -- type of the data, following https://zap.redblox.dev/config/types.html
-}
-`
-   And generate the zap files with `zap net.zap`
+    ```cfg
+    type PlayerData = struct {
+        -- type of the data, following https://zap.redblox.dev/config/types.html
+    }
+    ```
+    And generate the Zap files with `zap net.zap`
 
 For example, if you wanted to add the player's time played and coins, you'd modify the files as following:
 
@@ -293,7 +293,7 @@ event message = {
 }
 ```
 
-Next, regenerate the zap outputted scripts:
+Next, regenerate the Zap outputted scripts:
 
 ```sh
 zap net.zap
