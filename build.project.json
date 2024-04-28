@@ -1,0 +1,29 @@
+{
+    "name": "roblox_project_template",
+    "emitLegacyScripts": false,
+    "tree": {
+        "$className": "DataModel",
+
+        "ServerScriptService": {
+            "$ignoreUnknownInstances": true,
+            "server": {
+                "$path": "dist/server"
+            }
+        },
+
+        "ReplicatedStorage": {
+            "$path": "dist/shared",
+            "$ignoreUnknownInstances": true,
+            "packages": {
+                "$path": "packages"
+            }
+        },
+
+        "StarterPlayer": {
+            "StarterPlayerScripts": {
+                "$ignoreUnknownInstances": true,
+                "$path": "dist/client"
+            }
+        }
+    }
+}

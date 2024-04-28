@@ -1,0 +1,26 @@
+name: mark_marks/roblox_project_template
+version: 0.1.0
+description: a test gam
+authors:
+    - Mark-Marks
+exports: {}
+path_style: !roblox
+    place: {}
+private: true
+realm: shared
+indices:
+    default: https://github.com/daimond113/pesde-index
+sourcemap_generator: rojo sourcemap -o sourcemap.json
+dependencies:
+    ecr:
+        wally: wally#centau/ecr
+        version: ^0.8.0
+        index_url: https://github.com/UpliftGames/wally-index
+    future:
+        wally: wally#red-blox/future
+        version: ^1.0.1
+        index_url: https://github.com/UpliftGames/wally-index
+    keyform:
+        wally: wally#ffrostflame/keyform
+        version: ^0.2.2
+        index_url: https://github.com/UpliftGames/wally-index

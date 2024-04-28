@@ -1,0 +1,14 @@
+# This file lists tools managed by Aftman, a cross-platform toolchain manager.
+# For more information, see https://github.com/LPGhatguy/aftman
+
+# To add a new tool, add an entry to this table.
+[tools]
+darklua = "seaofvoices/darklua@0.13.0"
+stylua = "johnnymorganz/stylua@0.20.0"
+luau-lsp = "johnnymorganz/luau-lsp@1.28.1"
+rojo = "rojo-rbx/rojo@7.4.1"
+selene = "kampfkarren/selene@0.26.1"
+zap = "red-blox/zap@0.6.3"
+pesde = "daimond113/pesde@0.4.5"
+lune = "filiptibell/lune@0.8.3"
+# rojo = "rojo-rbx/rojo@6.2.0"
